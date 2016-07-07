@@ -11,6 +11,8 @@ if (file_exists('../.env')) {
     $dotenv = new Dotenv\Dotenv('../');
     $dotenv->load();
 }
+$lisavar = getenv('name');
+echo $lisavar;
 
 if (empty($_FILES)) {
     die('Service online');
@@ -20,7 +22,6 @@ if (empty($_FILES)) {
 // Note, if you go over a certain size, you may need to add a custom ini setting for Heroku
 $maxFileSize = getenv('MAX_FILE_SIZE');
 $maxFileSize = (!empty($maxFileSize)) ? $maxFileSize : 15;
-
 
 // Convert to bytes
 $maxFileSizeInBytes = $maxFileSize * 1024 * 1024;
