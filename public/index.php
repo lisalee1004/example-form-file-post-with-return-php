@@ -18,6 +18,19 @@ if (empty($_FILES)) {
     die('Service online');
 }
 
+// Twilio Exmaple from https://www.twilio.com/docs/libraries/php
+$AccountSid = getenv('twilio_account_sid'); // Your Account SID from www.twilio.com/console
+$AuthToken = getenv('twilio_account_auth_token');   // Your Auth Token from www.twilio.com/console
+
+$client = new Services_Twilio($AccountSid, $AuthToken);
+
+$message = $client->account->messages->create(array(
+    "From" => getenv('secretary_phone'), // From a valid Twilio number
+    "To" => $_POST['phone_number'],   // Text this number
+    "Body" => "Your Parking spot is ready!",
+));
+
+
 // Get the file size limit (or default to 15 MB)
 // Note, if you go over a certain size, you may need to add a custom ini setting for Heroku
 $maxFileSize = getenv('MAX_FILE_SIZE');
