@@ -21,6 +21,7 @@ if (empty($_FILES)) {
 $maxFileSize = getenv('MAX_FILE_SIZE');
 $maxFileSize = (!empty($maxFileSize)) ? $maxFileSize : 15;
 
+
 // Convert to bytes
 $maxFileSizeInBytes = $maxFileSize * 1024 * 1024;
 
