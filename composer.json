@@ -2,11 +2,12 @@
     "name": "zesty-io/example-form-file-post-with-return-php",
     "authors": [
         {
-            "name": "Andy Fleming",
-            "email": "andy@zesty.io"
+            "name": "Lisa Lee",
+            "email": "lisal@theideabrand.com
         }
     ],
     "require": {
-        "vlucas/phpdotenv": "^2.2"
+        "vlucas/phpdotenv": "^2.2", 
+        "dropbox/dropbox-sdk": "1.1.*"
     }
 }
