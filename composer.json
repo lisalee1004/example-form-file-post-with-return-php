@@ -8,6 +8,7 @@
     ],
     "require": {
         "vlucas/phpdotenv": "^2.2", 
-        "dropbox/dropbox-sdk": "1.1.*"
+        "dropbox/dropbox-sdk": "1.1.*",
+        "twilio/sdk": "4.*"
     }
 }
